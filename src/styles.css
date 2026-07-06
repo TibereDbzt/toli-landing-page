@@ -1,0 +1,22 @@
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--surface-app);
+  color: var(--text-primary);
+  font-family: var(--font-ui);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+a { -webkit-tap-highlight-color: transparent; }
+::selection { background: var(--accent-soft); }
+
+/* content is always visible; motion intentionally restrained per the system */
+.reveal { opacity: 1; transform: none; }
+
+.hero-frame { transform: perspective(1800px) rotateX(1.5deg); transform-origin: center top; }
+
+@media (max-width: 720px) {
+  .nav-links { display: none !important; }
+  .feature-row { gap: 32px !important; }
+}

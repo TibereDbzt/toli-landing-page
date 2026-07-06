@@ -82,62 +82,11 @@
 }
 </script>
 
-<link rel="stylesheet" href="_ds/toli-design-system-948a837a-9620-4579-bf2e-8c86baf8943c/tokens/fonts.css">
-<link rel="stylesheet" href="_ds/toli-design-system-948a837a-9620-4579-bf2e-8c86baf8943c/tokens/colors.css">
-<link rel="stylesheet" href="_ds/toli-design-system-948a837a-9620-4579-bf2e-8c86baf8943c/tokens/typography.css">
-<link rel="stylesheet" href="_ds/toli-design-system-948a837a-9620-4579-bf2e-8c86baf8943c/tokens/spacing.css">
-<link rel="stylesheet" href="_ds/toli-design-system-948a837a-9620-4579-bf2e-8c86baf8943c/styles.css">
-
-<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
-<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
-<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
-<script src="_ds/toli-design-system-948a837a-9620-4579-bf2e-8c86baf8943c/_ds_bundle.js"></script>
-<script src="landing/icons.js"></script>
-
-<style>
-  * { box-sizing: border-box; }
-  html { scroll-behavior: smooth; }
-  body {
-    margin: 0;
-    background: var(--surface-app);
-    color: var(--text-primary);
-    font-family: var(--font-ui);
-    -webkit-font-smoothing: antialiased;
-    text-rendering: optimizeLegibility;
-  }
-  a { -webkit-tap-highlight-color: transparent; }
-  ::selection { background: var(--accent-soft); }
-
-  /* content is always visible; motion intentionally restrained per the system */
-  .reveal { opacity: 1; transform: none; }
-
-  .hero-frame { transform: perspective(1800px) rotateX(1.5deg); transform-origin: center top; }
-
-  @media (max-width: 720px) {
-    .nav-links { display: none !important; }
-    .feature-row { gap: 32px !important; }
-  }
-</style>
+<!-- CSS is imported via src/entry-client.jsx; Vite bundles it automatically -->
 </head>
 <body>
-  <div id="root"></div>
+  <div id="root"><!--app-html--></div>
 
-  <template id="__bundler_thumbnail">
-    <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
-      <rect width="64" height="64" rx="12" fill="#0F0F11"/>
-      <g stroke="#F4F1EA" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round" fill="none">
-        <path d="M32 20 V24"/><path d="M42 25 l2.2 -2.2"/>
-        <circle cx="32" cy="38" r="12"/><path d="M32 38 L39 32"/>
-      </g>
-    </svg>
-  </template>
-
-  <script type="text/babel" data-presets="react" src="landing/mock-shell.jsx"></script>
-  <script type="text/babel" data-presets="react" src="landing/mocks-manager-a.jsx"></script>
-  <script type="text/babel" data-presets="react" src="landing/mocks-manager-b.jsx"></script>
-  <script type="text/babel" data-presets="react" src="landing/mocks-athlete.jsx"></script>
-  <script type="text/babel" data-presets="react" src="landing/sections-a.jsx"></script>
-  <script type="text/babel" data-presets="react" src="landing/sections-b.jsx"></script>
-  <script type="text/babel" data-presets="react" src="landing/app.jsx"></script>
+  <script type="module" src="/src/entry-client.jsx"></script>
 </body>
 </html>
