@@ -1,0 +1,10 @@
+/* ============================================================================
+   Toli Design System — global stylesheet entry point.
+   Consumers link THIS one file. Keep it a list of @import lines only —
+   never inline rules here.
+   ========================================================================== */
+
+@import "./tokens/fonts.css";
+@import "./tokens/colors.css";
+@import "./tokens/typography.css";
+@import "./tokens/spacing.css";

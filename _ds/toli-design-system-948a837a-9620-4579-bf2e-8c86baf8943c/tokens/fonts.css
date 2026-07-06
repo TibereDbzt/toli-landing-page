@@ -1,0 +1,5 @@
+/* Toli webfonts.
+   Display + UI + numerals all use Inter Tight (confirmed family, DESIGN_SYSTEM.md §4).
+   Loaded from the Google Fonts CDN. To self-host, drop the .woff2 files in
+   assets/fonts/ and replace the @import below with local @font-face rules. */
+@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,600&display=swap');

@@ -1,0 +1,56 @@
+/* ============================================================================
+   Toli — Typography tokens
+   Display + UI + numerals all use Inter Tight (DESIGN_SYSTEM.md §4).
+   Bold, editorial grotesque. First-class TABULAR LINING numerals everywhere
+   data appears (UTMB index, distance, elevation, counts).
+
+   Do NOT use a monospace family as a primary device (terminal cliché).
+   ========================================================================== */
+
+:root {
+  /* families */
+  --font-display: "Inter Tight", "Helvetica Neue", Arial, system-ui, sans-serif;
+  --font-ui:      "Inter Tight", "Helvetica Neue", Arial, system-ui, sans-serif;
+  --font-mono:    ui-monospace, "SF Mono", Menlo, monospace;
+
+  /* weights */
+  --weight-regular:  400;
+  --weight-medium:   500;
+  --weight-semibold: 600;
+  --weight-bold:     700;
+  --weight-heavy:    800;
+  --weight-black:    900;
+
+  /* ---- Type scale (rem, 16px base) — DESIGN_SYSTEM.md §4 ---- */
+  /* display-xl — page title ("athletes", "utmb") */
+  --display-xl-size:   2.5rem;
+  --display-xl-line:   1.05;   /* @kind other */
+  --display-xl-weight: var(--weight-black);
+  --display-xl-track:  -0.02em;
+
+  /* display-lg — section / card hero numerals */
+  --display-lg-size:   1.75rem;
+  --display-lg-line:   1.1;   /* @kind other */
+  --display-lg-weight: var(--weight-bold);
+  --display-lg-track:  -0.01em;
+
+  /* title — athlete name, card title */
+  --title-size:   1.125rem;
+  --title-line:   1.25;   /* @kind other */
+  --title-weight: var(--weight-bold);
+  --title-track:  -0.005em;
+
+  /* body — default text */
+  --body-size:   0.9375rem;
+  --body-line:   1.45;   /* @kind other */
+  --body-weight: var(--weight-regular);
+
+  /* label — UPPERCASE tracked eyebrows / column heads */
+  --label-size:   0.75rem;
+  --label-line:   1.2;   /* @kind other */
+  --label-weight: var(--weight-semibold);
+  --label-track:  0.08em;
+
+  /* tabular numerals — opt-in feature settings for any data figure */
+  --num-feature: "tnum" 1, "lnum" 1;   /* @kind other */
+}

@@ -1,0 +1,46 @@
+/* ============================================================================
+   Toli — Spacing, radius, hairline, shadow tokens
+   Base unit 4px. Generous but purposeful. Dense where it must be (rosters,
+   attendance tables), calm elsewhere.
+   ========================================================================== */
+
+:root {
+  /* ---- Spacing scale (px) — DESIGN_SYSTEM.md §5 ---- */
+  --space-1:  4px;
+  --space-2:  8px;
+  --space-3:  12px;
+  --space-4:  16px;
+  --space-5:  20px;
+  --space-6:  24px;
+  --space-8:  32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-16: 64px;
+
+  /* ---- Radius ---- */
+  --radius-sm:   8px;    /* inputs, tags */
+  --radius-md:   12px;   /* cards, fields */
+  --radius-lg:   16px;   /* panels, stat cards */
+  --radius-pill: 999px;  /* chips, status pills, buttons */
+
+  /* ---- Hairline ---- */
+  --hairline-width: 1px;
+
+  /* ---- Minimum tap target (mobile-first, §8/§10) ---- */
+  --tap-min: 44px;
+
+  /* ---- Shadows ---- *
+     Light: soft, low, neutral — raised cards float gently off the paper.
+     Dark:  near-flat; elevation reads through surface color + hairline. */
+  --shadow-card:    0 1px 2px rgba(22, 18, 14, 0.04),
+                    0 2px 8px rgba(22, 18, 14, 0.04);
+  --shadow-card-lg: 0 2px 4px rgba(22, 18, 14, 0.05),
+                    0 8px 24px rgba(22, 18, 14, 0.06);
+  --shadow-pop:     0 8px 32px rgba(22, 18, 14, 0.12);
+}
+
+[data-theme="dark"] {
+  --shadow-card:    0 1px 2px rgba(0, 0, 0, 0.4);
+  --shadow-card-lg: 0 2px 12px rgba(0, 0, 0, 0.5);
+  --shadow-pop:     0 12px 40px rgba(0, 0, 0, 0.6);
+}

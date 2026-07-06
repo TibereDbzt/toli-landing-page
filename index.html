@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Toli — Team management for pro trail running</title>
+<meta name="description" content="Toli is the operations platform for pro trail running teams. Roster management, race registrations, athlete logistics, targeted messaging — all in one place. Built for team managers, designed for athletes.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://toli.run/">
+
+<!-- Favicon -->
+<link rel="icon" href="/assets/toli-mark.svg" type="image/svg+xml">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Toli">
+<meta property="og:url" content="https://toli.run/">
+<meta property="og:title" content="Toli — Team management for pro trail running">
+<meta property="og:description" content="Roster, race registrations, athlete logistics, and targeted messaging — one platform for trail running team managers. Replace spreadsheets, WhatsApp threads, and scattered emails.">
+<meta property="og:image" content="https://toli.run/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Toli — Team management platform for pro trail running teams">
+<meta property="og:locale" content="en_US">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Toli — Team management for pro trail running">
+<meta name="twitter:description" content="Roster, race registrations, athlete logistics, and targeted messaging — one platform for trail running team managers.">
+<meta name="twitter:image" content="https://toli.run/assets/og-image.png">
+
+<!-- Structured data: SoftwareApplication -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://toli.run/#organization",
+      "name": "Toli",
+      "url": "https://toli.run",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://toli.run/assets/toli-mark.svg"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "email": "hello@toli.run",
+        "contactType": "customer support"
+      }
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://toli.run/#software",
+      "name": "Toli",
+      "url": "https://toli.run",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Web",
+      "description": "Team management platform for professional trail running teams. Roster management, race registrations, athlete logistics, targeted messaging, and performance insights.",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "EUR",
+        "description": "Book a demo to get pricing"
+      },
+      "publisher": {
+        "@id": "https://toli.run/#organization"
+      },
+      "keywords": "trail running team management, gestion équipe trail, roster athlètes trail, logistique course trail, team manager trail running"
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://toli.run/#website",
+      "url": "https://toli.run",
+      "name": "Toli",
+      "description": "Team management platform for pro trail running teams",
+      "publisher": {
+        "@id": "https://toli.run/#organization"
+      }
+    }
+  ]
+}
+</script>
+
+<link rel="stylesheet" href="_ds/toli-design-system-948a837a-9620-4579-bf2e-8c86baf8943c/tokens/fonts.css">
+<link rel="stylesheet" href="_ds/toli-design-system-948a837a-9620-4579-bf2e-8c86baf8943c/tokens/colors.css">
+<link rel="stylesheet" href="_ds/toli-design-system-948a837a-9620-4579-bf2e-8c86baf8943c/tokens/typography.css">
+<link rel="stylesheet" href="_ds/toli-design-system-948a837a-9620-4579-bf2e-8c86baf8943c/tokens/spacing.css">
+<link rel="stylesheet" href="_ds/toli-design-system-948a837a-9620-4579-bf2e-8c86baf8943c/styles.css">
+
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="_ds/toli-design-system-948a837a-9620-4579-bf2e-8c86baf8943c/_ds_bundle.js"></script>
+<script src="landing/icons.js"></script>
+
+<style>
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    background: var(--surface-app);
+    color: var(--text-primary);
+    font-family: var(--font-ui);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  a { -webkit-tap-highlight-color: transparent; }
+  ::selection { background: var(--accent-soft); }
+
+  /* content is always visible; motion intentionally restrained per the system */
+  .reveal { opacity: 1; transform: none; }
+
+  .hero-frame { transform: perspective(1800px) rotateX(1.5deg); transform-origin: center top; }
+
+  @media (max-width: 720px) {
+    .nav-links { display: none !important; }
+    .feature-row { gap: 32px !important; }
+  }
+</style>
+</head>
+<body>
+  <div id="root"></div>
+
+  <template id="__bundler_thumbnail">
+    <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+      <rect width="64" height="64" rx="12" fill="#0F0F11"/>
+      <g stroke="#F4F1EA" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round" fill="none">
+        <path d="M32 20 V24"/><path d="M42 25 l2.2 -2.2"/>
+        <circle cx="32" cy="38" r="12"/><path d="M32 38 L39 32"/>
+      </g>
+    </svg>
+  </template>
+
+  <script type="text/babel" data-presets="react" src="landing/mock-shell.jsx"></script>
+  <script type="text/babel" data-presets="react" src="landing/mocks-manager-a.jsx"></script>
+  <script type="text/babel" data-presets="react" src="landing/mocks-manager-b.jsx"></script>
+  <script type="text/babel" data-presets="react" src="landing/mocks-athlete.jsx"></script>
+  <script type="text/babel" data-presets="react" src="landing/sections-a.jsx"></script>
+  <script type="text/babel" data-presets="react" src="landing/sections-b.jsx"></script>
+  <script type="text/babel" data-presets="react" src="landing/app.jsx"></script>
+</body>
+</html>

@@ -1,0 +1,142 @@
+/* ============================================================================
+   Toli — Color tokens
+   One system, two surfaces. Light = "paper" (warm off-white). Dark = "ink"
+   (deep charcoal, NOT pure black, NO neon glow).
+
+   Rules (DESIGN_SYSTEM.md §2 — settled, do not re-litigate):
+   1. Red (--danger) is reserved STRICTLY for the negative/danger family:
+      destructive actions, errors, and negative status (injured / withdrawn).
+      Red is NOT the brand or primary-action color.
+   2. The base is ink/neutral-led. Primary actions, active + selected states use
+      a high-contrast neutral, exposed as the single --accent token.
+   3. --accent is the ONLY white-label swap point. Toli's default --accent is the
+      neutral below; a tenant overrides --accent (+ --accent-on) with their brand
+      color on BOTH surfaces. Nothing else changes.
+   4. Semantic status colors are FIXED — identical across every tenant.
+   ========================================================================== */
+
+:root {
+  /* ---- 3.1 Primitives — Light (paper) ---- */
+  --ink:            #16120E;  /* primary text */
+  --ink-muted:      #6B655C;  /* secondary text, labels */
+  --ink-faint:      #A8A199;  /* tertiary / placeholder */
+
+  --surface:        #F4F1EA;  /* app background (paper) */
+  --surface-raised: #FFFFFF;  /* cards, panels */
+  --surface-sunken: #ECE7DD;  /* wells, input backgrounds */
+  --hairline:       #E3DDD2;  /* 1px borders / dividers */
+
+  /* ---- 3.2 Accent (brand / primary action) — TENANT-OVERRIDABLE ----
+     Default = ink. Override ONLY --accent + --accent-on per tenant. */
+  --accent:         #16120E;
+  --accent-on:      #F4F1EA;
+  --accent-soft:    rgba(22, 18, 14, 0.06);  /* active/selected tint, focus halo */
+
+  /* ---- 3.3 Danger — FIXED (never overridable) ---- */
+  --danger:         #D8392B;
+  --danger-soft:    #FBE9E6;
+
+  /* ---- 3.4 Semantic status primitives — FIXED ---- */
+  --green:          #2E9E5B;
+  --amber:          #B5862A;
+  --neutral:        #8A847A;
+
+  /* soft tints for status pills (color-mix against paper) */
+  --green-soft:     #E4F1E9;
+  --amber-soft:     #F3EAD6;
+  --neutral-soft:   #ECE7DD;
+
+  /* ============================================================
+     Semantic aliases — reference these in product code, not the
+     primitives above. Roles stay stable across both surfaces.
+     ============================================================ */
+
+  /* text */
+  --text-primary:   var(--ink);
+  --text-muted:     var(--ink-muted);
+  --text-faint:     var(--ink-faint);
+  --text-on-accent: var(--accent-on);
+
+  /* surfaces */
+  --surface-app:    var(--surface);
+  --surface-card:   var(--surface-raised);
+  --surface-well:   var(--surface-sunken);
+  --border:         var(--hairline);
+
+  /* health status (healthStatus) */
+  --status-healthy:      var(--green);
+  --status-healthy-soft: var(--green-soft);
+  --status-injured:      var(--danger);
+  --status-injured-soft: var(--danger-soft);
+  --status-resting:      var(--amber);
+  --status-resting-soft: var(--amber-soft);
+
+  /* registration status (considering | needs_bib | registered | withdrawn) */
+  --reg-considering:      var(--neutral);
+  --reg-considering-soft: var(--neutral-soft);
+  --reg-needs-bib:        var(--amber);
+  --reg-needs-bib-soft:   var(--amber-soft);
+  --reg-registered:       var(--green);
+  --reg-registered-soft:  var(--green-soft);
+  --reg-withdrawn:        var(--danger);   /* §3.4 open item: neutral vs red — using red */
+  --reg-withdrawn-soft:   var(--danger-soft);
+}
+
+/* ============================================================================
+   Dark (ink) surface. Same system, luminance tuned for AA contrast.
+   ========================================================================== */
+[data-theme="dark"] {
+  --ink:            #F4F1EA;
+  --ink-muted:      #9A948A;
+  --ink-faint:      #6A645B;
+
+  --surface:        #0F0F11;
+  --surface-raised: #1A1A1D;
+  --surface-sunken: #0A0A0C;
+  --hairline:       #2A2A2E;
+
+  --accent:         #F4F1EA;
+  --accent-on:      #16120E;
+  --accent-soft:    rgba(244, 241, 234, 0.08);
+
+  --danger:         #F2584A;
+  --danger-soft:    #3A1714;
+
+  --green:          #3FB86E;
+  --amber:          #D6A33E;
+  --neutral:        #8E887E;
+
+  --green-soft:     #122A1C;
+  --amber-soft:     #2E2410;
+  --neutral-soft:   #1F1F22;
+
+  /* Semantic aliases MUST be redeclared here: a custom property referencing
+     var(--primitive) is substituted at its DECLARING element, so the :root
+     aliases freeze to the light primitives. Redeclaring against the dark
+     primitives above lets them resolve correctly in the dark subtree. */
+  --text-primary:   var(--ink);
+  --text-muted:     var(--ink-muted);
+  --text-faint:     var(--ink-faint);
+  --text-on-accent: var(--accent-on);
+
+  --surface-app:    var(--surface);
+  --surface-card:   var(--surface-raised);
+  --surface-well:   var(--surface-sunken);
+  --border:         var(--hairline);
+
+  --status-healthy:      var(--green);
+  --status-healthy-soft: var(--green-soft);
+  --status-injured:      var(--danger);
+  --status-injured-soft: var(--danger-soft);
+  --status-resting:      var(--amber);
+  --status-resting-soft: var(--amber-soft);
+
+  --reg-considering:      var(--neutral);
+  --reg-considering-soft: var(--neutral-soft);
+  --reg-needs-bib:        var(--amber);
+  --reg-needs-bib-soft:   var(--amber-soft);
+  --reg-registered:       var(--green);
+  --reg-registered-soft:  var(--green-soft);
+  --reg-withdrawn:        var(--danger);
+  --reg-withdrawn-soft:   var(--danger-soft);
+}
