@@ -27,16 +27,19 @@ function Proof({ children }) {
 
 export function BrandMark({ size = 30 }) {
   return (
-    <span style={{ display: 'inline-flex', alignItems: 'center', gap: 11 }}>
-      <span style={{ width: size, height: size, borderRadius: size * 0.28, background: 'var(--accent)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-        <svg width={size * 0.66} height={size * 0.66} viewBox="0 0 64 64" fill="none">
-          <g stroke="var(--accent-on)" strokeWidth="3.6" strokeLinecap="round" strokeLinejoin="round">
-            <path d="M32 13.5 V18" /><path d="M44.5 21.5 l2.4 -2.4" />
-            <circle cx="32" cy="36" r="15" /><path d="M32 36 L40 28.5" />
-          </g>
+    <span style={{ display: 'inline-flex', alignItems: 'center', gap: 8 }}>
+      <span style={{ width: size, height: size, borderRadius: size * 0.28, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+        <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <mask id="mask0_233_106" style={{ maskType: 'alpha' }} maskUnits="userSpaceOnUse" x="0" y="0" width="30" height="30">
+            <rect width="30" height="30" rx="10" fill="#F57657"/>
+            </mask>
+            <g mask="url(#mask0_233_106)">
+            <rect width="30" height="30" rx="10" fill="#F57657"/>
+            <path d="M4.09816 30.615C6.11368 21.0268 9.46939 7.47426 17.5734 21.0438C23.8039 31.4764 23.4417 6.69919 30.7589 4.74304" stroke="#FFFBF3" strokeWidth="3.42466"/>
+            </g>
         </svg>
       </span>
-      <span style={{ fontFamily: 'var(--font-display)', fontWeight: 900, fontSize: size * 0.74, letterSpacing: '-0.03em' }}>toli</span>
+      <span style={{ fontFamily: 'var(--font-display)', fontWeight: 900, fontSize: size * 0.7, letterSpacing: '-0.03em', color: '#F57657' }}>toli</span>
     </span>
   )
 }
