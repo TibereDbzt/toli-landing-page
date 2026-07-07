@@ -30,16 +30,22 @@ export function BrandMark({ size = 30 }) {
     <span style={{ display: 'inline-flex', alignItems: 'center', gap: 8 }}>
       <span style={{ width: size, height: size, borderRadius: size * 0.28, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
         <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <mask id="mask0_233_106" style={{ maskType: 'alpha' }} maskUnits="userSpaceOnUse" x="0" y="0" width="30" height="30">
+            <mask id="mask0_235_141" style={{ maskType: 'alpha' }} maskUnits="userSpaceOnUse" x="0" y="0" width="30" height="30">
             <rect width="30" height="30" rx="10" fill="#F57657"/>
             </mask>
-            <g mask="url(#mask0_233_106)">
-            <rect width="30" height="30" rx="10" fill="#F57657"/>
+            <g mask="url(#mask0_235_141)">
+            <rect width="30" height="30" rx="10" fill="url(#paint0_linear_235_141)"/>
             <path d="M4.09816 30.615C6.11368 21.0268 9.46939 7.47426 17.5734 21.0438C23.8039 31.4764 23.4417 6.69919 30.7589 4.74304" stroke="#FFFBF3" strokeWidth="3.42466"/>
             </g>
+            <defs>
+            <linearGradient id="paint0_linear_235_141" x1="17" y1="7.98702e-07" x2="5" y2="30" gradientUnits="userSpaceOnUse">
+            <stop stopColor="#FF7300"/>
+            <stop offset="1" stopColor="#C75D06"/>
+            </linearGradient>
+            </defs>
         </svg>
       </span>
-      <span style={{ fontFamily: 'var(--font-display)', fontWeight: 900, fontSize: size * 0.7, letterSpacing: '-0.03em', color: '#F57657' }}>toli</span>
+      <span style={{ fontFamily: 'var(--font-display)', fontWeight: 900, fontSize: size * 0.7, letterSpacing: '-0.03em', color: '#E16803' }}>Toli</span>
     </span>
   )
 }
