@@ -114,7 +114,7 @@ function Button({
       e.currentTarget.style.filter = "none";
     },
     onMouseEnter: e => {
-      if (!disabled) e.currentTarget.style.filter = "brightness(0.94)";
+      if (!disabled) e.currentTarget.style.filter = "brightness(1.07)";
     }
   }, rest), icon ? /*#__PURE__*/React.createElement("span", {
     style: {

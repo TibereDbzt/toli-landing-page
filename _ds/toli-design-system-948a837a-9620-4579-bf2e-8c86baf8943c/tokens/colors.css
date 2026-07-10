@@ -28,8 +28,8 @@
 
   /* ---- 3.2 Accent (brand / primary action) — TENANT-OVERRIDABLE ----
      Default = ink. Override ONLY --accent + --accent-on per tenant. */
-  --accent:         #16120E;
-  --accent-on:      #F4F1EA;
+  --accent:         #ee6e04;
+  --accent-on:      #fbf9f6;
   --accent-soft:    rgba(22, 18, 14, 0.06);  /* active/selected tint, focus halo */
 
   /* ---- 3.3 Danger — FIXED (never overridable) ---- */
