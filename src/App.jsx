@@ -1,6 +1,6 @@
 import React from 'react'
 import { NavBar, Hero, Problem, Product } from './sections/sections-a.jsx'
-import { Athletes, DayCompare, Why, Trusted, FAQ, FinalCTA, Footer } from './sections/sections-b.jsx'
+import { Athletes, Privacy, DayCompare, Why, FAQ, FinalCTA, Footer } from './sections/sections-b.jsx'
 
 export default function App() {
   return (
@@ -11,9 +11,9 @@ export default function App() {
         <Problem />
         <Product />
         <Athletes />
+        <Privacy />
         <DayCompare />
         <Why />
-        <Trusted />
         <FAQ />
         <FinalCTA />
       </main>

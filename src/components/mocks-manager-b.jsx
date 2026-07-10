@@ -159,9 +159,6 @@ export function PerfMock() {
           <Avatar name="Émile Auclair" initials="ÉA" size="sm" />
           <span style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: 16, letterSpacing: '-0.01em' }}>Émile Auclair</span>
           <Tag>Elite</Tag>
-          <span style={{ marginLeft: 'auto', display: 'inline-flex', alignItems: 'center', gap: 7, fontFamily: 'var(--font-ui)', fontSize: 12, fontWeight: 600, color: 'var(--text-faint)' }}>
-            <Ic.refresh size={14} /> Synced from utmb.world
-          </span>
         </div>
 
         <div style={{ marginTop: 14, background: 'var(--surface-card)', border: '1px solid var(--hairline)', borderRadius: 16, overflow: 'hidden', boxShadow: 'var(--shadow-card)' }}>
